@@ -1,7 +1,8 @@
 <template>
   <v-app id="app">
+    <navbar/>
     <v-container>
-      <header/>
+
       <nuxt/>
     </v-container>
     <auth/>

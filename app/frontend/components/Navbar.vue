@@ -1,16 +1,16 @@
 <template>
   <div class="d-flex justify-center">
     <v-row class="no-gutters header pa-4 ">
-      <v-col cols="12" lg="2" class="d-flex align-center pl-5">
+      <v-col cols="12" md="2" class="d-flex align-center pl-5">
         <img class="logo" alt="logo" src="/img/BAYSEE.svg"/>
       </v-col>
-      <v-col cols="12" offset="1" lg="5" class="d-flex align-center justify-center">
+      <v-col cols="12" offset-md="1" md="8" lg="5" class="d-flex align-center justify-center">
         <input type="text" placeholder="Search"/>
         <v-btn class="ml-2" icon>
           <img class="magnify " alt="logo" src="/img/magnify.svg"/>
         </v-btn>
       </v-col>
-      <v-col cols="12" lg="4" class="d-flex header--buttons align-center justify-center">
+      <v-col v-if="$vuetify.breakpoint.lgAndUp" cols="12" md="4" class="d-flex header--buttons align-center justify-center">
         <v-btn color="secondary">Setting</v-btn>
         <v-btn color="secondary">Lobby</v-btn>
         <v-btn @click="openAuthDialog()" color="secondary">Login</v-btn>
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: "Header",
+  name: "Navbar",
   methods: {
     openAuthDialog() {
       this.$store.dispatch('modals/open', 'auth')
