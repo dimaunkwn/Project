@@ -3,7 +3,7 @@
 dockerize -wait tcp://${APP_DB_HOST}:${APP_DB_PORT}
 
 # Миграция и синхронизация
-./manage.py migrate --noinput
+python manage.py migrate --noinput
 
 # Запуск команды
-./manage.py runserver 0.0.0.0:8000
+python manage.py runserver 0.0.0.0:8000
