@@ -1,12 +1,12 @@
 {
-  "name": "baysee-front",
+  "name": "frontend",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "../../../baysee-front/node_modules/.bin/nuxt",
-    "build": "../../../baysee-front/node_modules/.bin/nuxt build",
-    "start": "../../../baysee-front/node_modules/.bin/nuxt start",
-    "generate": "../../../baysee-front/node_modules/.bin/nuxt generate"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "@vue/composition-api": "^1.4.9",
