@@ -1,3 +1,5 @@
 ci/dev/.env
 .idea
 __pycache__
+
+ci/dev/docker/backend/docker-compose.env
