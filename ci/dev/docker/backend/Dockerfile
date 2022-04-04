@@ -1,4 +1,4 @@
-FROM python:3.9-alpine
+FROM python:3.10-alpine
 
 ENV DOCKERIZE_VERSION v0.6.1
 RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
@@ -8,6 +8,9 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 RUN apk update
 RUN apk add python3-dev  \
     libpq-dev  \
+    libc-dev \
+    musl-dev \
+    libffi-dev \
     gcc
 RUN pip install --upgrade pip wheel \
     && pip install psycopg2-binary

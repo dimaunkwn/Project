@@ -16,6 +16,10 @@ services:
       context: ../../
       dockerfile: ci/dev/docker/backend/Dockerfile
     restart: on-failure
+    expose:
+      - 8000
+    ports:
+      - 8000:8000
     volumes:
       - "../../app/backend/:/var/app"
     depends_on:
